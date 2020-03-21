@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.css'
 
 import './global.css'
-// import BadgeNew from './pages/BadgeNew'
-import Badges from './pages/Badges'
+import App from './components/App'
 
 // const element = <h1>Hello, Platzi Badges</h1>
 // const element = React.createElement('h1', {}, 'Hello, Platzi Badges')
@@ -12,4 +11,4 @@ import Badges from './pages/Badges'
 const container = document.getElementById('app')
 
 // ReactDOM.render(__que__, __donde__)
-ReactDOM.render(<Badges />, container)
+ReactDOM.render(<App />, container)
