@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 import "./styles/BadgeDetails.css"
 import confLogo from '../images/platziconf-logo.svg'
+import DeleteBadgeModal from '../components/DeleteBadgeModal'
 
 function BadgeDetails(props) {
   return (
@@ -40,7 +41,12 @@ function BadgeDetails(props) {
                 <Link to={`/badges/${props.badge.id}/edit`} className="btn btn-primary mb-4">Edit</Link>
               </div>
               <div>
-                <button className="btn btn-danger">Delete</button>
+                <button onClick={props.onOpenModal} className="btn btn-danger">Delete</button>
+                <DeleteBadgeModal
+                  onClose={props.onCloseModal}
+                  isOpen={props.modalIsOpen}
+                  onDeleteBadge={props.onDeleteBadge}
+                />
               </div>
             </div>
           </div>
